@@ -7,4 +7,4 @@ y1, y2 = np.sin(x), np.cos(x)
 
 plt.plot(x, y1, marker='o', mec='r', mfc='w')
 plt.plot(x, y2, marker='*', ms=10)
-plt.show()
+plt.show() 
