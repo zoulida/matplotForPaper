@@ -34,7 +34,7 @@ ax1.legend(loc=1)
 #ax1.set_ylim([-20, 30]);
 ax1.set_ylabel('时间(s)');
 ax1.set_xlabel('c Value(%)');
-plt.legend(prop={'family':'SimHei','size':8},loc="upper right")  #设置中文
+plt.legend(prop={'family':'SimHei','size':8},loc="upper right", bbox_to_anchor=(0.85,1))  #设置中文
 ax2 = ax1.twinx() # this is the important function
 
 
