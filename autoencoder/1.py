@@ -26,8 +26,8 @@ ax = plt.gca()
 ax.spines['top'].set_visible(False)  #去掉上边框
 ax.spines['right'].set_visible(False) #去掉右边框
 
-plt.plot(x,A,color="black",label="查全率",linewidth=1.5)
-plt.plot(x,B,"k--",label="查准率",linewidth=1.5)
+plt.plot(x,A,color="black",label="Recall Ratio",linewidth=1.5)
+plt.plot(x,B,"k--",label="Precision Ratio",linewidth=1.5)
 plt.plot(x,C,color="red",label="F1 Score",linewidth=1.5)
 #plt.plot(x,D,"r--",label="D algorithm",linewidth=1.5)
 

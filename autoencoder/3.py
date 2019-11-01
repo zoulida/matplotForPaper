@@ -24,15 +24,15 @@ lx=['0','20','40','60','80','100']
 fig = plt.figure()
 ax1 = fig.add_subplot(111)
 width = 1/4
-ax1.bar(l,wc_cost,width,alpha = 0.9,color='orange',label=u'KMCAET-WC代价', zorder=30)
-ax1.bar(l + width,Random_cost,width,alpha = 0.9,color='green',label=u'KMCAET-Random代价', zorder=30)
+ax1.bar(l,wc_cost,width,alpha = 0.9,color='orange',label=u'TCACKM-WC Cost', zorder=30)
+ax1.bar(l + width,Random_cost,width,alpha = 0.9,color='green',label=u'TCACKM-Random Cost', zorder=30)
 
 #ax1.yaxis.set_major_formatter(yticks)
 #for i,(_x,_y) in enumerate(zip(l,b)):
 #    plt.text(_x,_y,b[i],color='black',fontsize=10,)  #将数值显示在图形上
 ax1.legend(loc=1)
 #ax1.set_ylim([-20, 30]);
-ax1.set_ylabel('时间(s)');
+ax1.set_ylabel('Time(s)');
 ax1.set_xlabel('c Value(%)');
 plt.legend(prop={'family':'SimHei','size':8},loc="upper right", bbox_to_anchor=(0.85,1))  #设置中文
 ax2 = ax1.twinx() # this is the important function
@@ -41,9 +41,9 @@ ax2 = ax1.twinx() # this is the important function
 #plt.bar(l,a,alpha=0.3,color='blue',label=u'产量')
 #plt.bar(l,a,alpha=0.3,color='red',label=u'开心')
 ax2.legend(loc=2)
-ax2.plot(l, wc_time,'or-',label=u'KMCAET-WC收敛时间', zorder=10);
-ax2.plot(l, Random_time,'vb-',label=u'KMCAET-Random收敛时间', zorder=10);
-ax2.set_ylabel('代价');
+ax2.plot(l, wc_time,'or-',label=u'TCACKM-WC Convergence Time', zorder=10);
+ax2.plot(l, Random_time,'vb-',label=u'TCACKM-Random Convergence Time', zorder=10);
+ax2.set_ylabel('Cost');
 #ax2.set_xlabel('代价');
 #ax2.set_ylim([0, 600])  #设置y轴取值范围
 plt.legend(prop={'family':'SimHei','size':8},loc="upper left")

@@ -32,14 +32,14 @@ ax1.spines['top'].set_color('none')
 ax1.xaxis.set_ticks_position('bottom')
 ##将x轴移动至0刻度处
 ax1.spines['bottom'].set_position(('data', 0))
-ax1.set_ylabel('时间(s)');
+ax1.set_ylabel('Time(s)');
 ##设置x轴的标签，3个单位长度间隔，和柱子间距一致
 ##ax1.set_xticks(np.arange(0,len(name)*3,3))
 #ax1.set_xticklabels(name, ha='left', fontsize=9)
 ##设置柱子间距
 idx = np.arange(w, len(name) * 4 + w, 4)
 ##生成柱状图，VI是数据列，width是柱子宽度
-plt.bar(idx, VC, width=w, color='red', label=u'代价')
+plt.bar(idx, VC, width=w, color='red', label=u'Cost')
 plt.legend(prop={'family':'SimHei','size':8},loc="upper right", bbox_to_anchor=(0.85,1))
 ##-----绘制左边柱子----------
 ##共享x坐标，这是关键
@@ -48,8 +48,8 @@ ax2.spines['bottom'].set_position(('data', 0))
 #ax2.set_ylim(-max(VI), max(VI))
 ax2.set_xticks(np.arange(0, len(name) * 3, 3))
 ax2.set_xticklabels(name, ha='left', fontsize=9)
-ax2.set_ylabel('代价');
-plt.bar(idx - w, VI, width=w, label=u'收敛时间')
+ax2.set_ylabel('Cost');
+plt.bar(idx - w, VI, width=w, label=u'Convergence Time')
 plt.legend(prop={'family':'SimHei','size':8},loc="upper left", bbox_to_anchor=(0.15,1))
 plt.xticks(idx-1/2, name)
 plt.show()
